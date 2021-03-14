@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: nginx-web
-        image: registry.digitalocean.com/devops-cicd-testing/website 
+        image: <IMAGE> 
         ports:
         - containerPort: 80
