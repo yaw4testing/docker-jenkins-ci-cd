@@ -30,9 +30,9 @@ jobs:
     - name: checkout master
       uses: actions/checkout@master
     - name: install doctl
-      uses: digitalocean/action-doctl@v1
+      uses: digitalocean/action-doctl@v2
       with:
-        args: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+        token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
     - name: Build container image
       run: docker build -t registry.digitalocean.com/registry.digitalocean.com/devops-cicd-testing:$(echo $GITHUB_SHA | head -c7) .
 
